@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Monoton&family=Viga&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <!--Nav Bar Header-->
+    <nav class="navbar" id="navbar">
+    
+        <span id="weather-dashboard">Weather Dashboard</span>
+        
+    </nav>
+    <!--Search Bar-->
+    <nav class="navbar navbar-light bg-light">
+        <form class="form-inline">
+            <div id="search-header">Search for a City: </div>
+            <br>
+            <input class="form-control mr-sm-2" id="search" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" id="searchBtn" type="submit">Search</button>
+        </form>
+    </nav>
+    <!-- List Group to Display Search Results-->
+    <div class="row">
+        <div class="col-2">
+            <ul class="list-group" id="search-list">
+            </ul>
+        </div>
+        <!-- Jumbotron for displaying City Weather Data-->
+        <div class="col-10">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">What's in the forecast?</h1>
+                    <!-- <div id="icon"><img id="wicon" src="" alt="Weather icon"></div> -->
+                    <p class="lead city">Enter city by name to see today's weather and get your five day forecast.
+                    </p>
+                    <p class="lead wind">Wind</p>
+                    <p class="lead humidity">Humidity</p>
+                    <p class="lead temp">Temp F°</p>
+                    <p class="lead uv-index">UV Index: <span class="badge" id="current-uv-level"></span></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--Five day forecast html elements-->
+    <div class="row" id="card-row">
+        <div class="card" id="five-day"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"
+        integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
